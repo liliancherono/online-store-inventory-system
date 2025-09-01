@@ -26,7 +26,7 @@ def update_product_logic(product_id, new_name, new_price_str, new_stock_str):
         product = session.query(Product).get(product_id)
 
         if not product:
-            return False, " Product not found."
+            return False, " Product not found."   
 
         if new_name:
             product.name = new_name
